@@ -16,6 +16,7 @@ concurrency:
 
 env:
   NODE_ENV: production
+  CI: true
 
 jobs:
   build:
@@ -37,9 +38,9 @@ jobs:
         run: npm install
 
       - name: Build with Astro
-        run: |
-          export NODE_ENV=production
-          npm run build
+        run: npm run build
+        env:
+          CI: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -7,6 +7,9 @@ const inicioEntry = landingEntries.find((entry) => entry.slug === 'inicio') || l
 
 // Renderizar el contenido para obtener el componente Content
 const { Content } = inicioEntry ? await inicioEntry.render() : { Content: null };
+
+// Obtener la ruta base
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <section class="landing-hero">
@@ -26,7 +29,7 @@ const { Content } = inicioEntry ? await inicioEntry.render() : { Content: null }
         </div>
         
         <div class="hero-image">
-            <img src="/images/photo.png" alt="María Pozo - Profesora de teatro y educación emocional" />
+            <img src={`${baseUrl}/images/photo.png`} alt="María Pozo - Profesora de teatro y educación emocional" />
         </div>
     </div>
 </section>

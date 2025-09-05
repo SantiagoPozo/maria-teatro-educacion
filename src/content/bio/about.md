@@ -6,7 +6,7 @@ orden: 1
 
 Mi trayectoria docente comenzó en Sevilla, como profesora extraescolar de teatro cuando terminaba mi último año de Licenciatura en Química en 2006. Poco después impartí clases de español en una escuela de Chicago, al mismo tiempo que me formaba en improvisación teatral. Esa experiencia me mostró la fuerza del teatro como puente entre culturas y lenguas.
 
-![María Pozo - Profesora de teatro y educación emocional](/images/photo.png)
+![María Pozo - Profesora de teatro y educación emocional](../../images/photo.png)
 
 A mi regreso a Sevilla, trabajé como profesora de inglés en primaria y, más tarde, como docente de inglés, física, química y ciencias en secundaria. Durante esos años descubrí que, más allá de los contenidos, lo que realmente transforma el aprendizaje eran la comunicación, la empatía, el juego y la creatividad. También entendí el valor de la curiosidad, la disciplina y el pensamiento crítico como pilares educativos.
 

@@ -1,0 +1,54 @@
+// Tipografía base
+h1, h2, h3, h4, h5, h6
+  font-family: $font-primary
+  font-weight: bold
+  line-height: 1.2
+  margin-bottom: $spacing-md
+
+h1
+  font-family: $font-primary
+  font-size: $font-size-h1
+  font-weight: 700
+  line-height: 1.2
+  color: $primary-color
+  margin-bottom: $spacing-lg
+  text-align: center
+  
+  @include mobile
+    font-size: 2rem
+
+h2
+  font-size: $font-size-h2
+  color: $primary-color
+
+h3
+  font-size: $font-size-h3
+  color: $primary-color
+
+p
+  margin-bottom: $spacing-md
+  line-height: $line-height-base
+
+strong, b
+  font-weight: bold
+
+em, i
+  font-style: italic
+
+blockquote
+  font-style: italic
+  padding: $spacing-md
+  border-left: 4px solid $primary-color
+  margin: $spacing-lg 0
+  background-color: $background-light
+
+// Enlaces
+
+
+// Listas
+ul, ol
+  margin-bottom: $spacing-md
+  padding-left: $spacing-lg
+
+  li
+    margin-bottom: $spacing-xs

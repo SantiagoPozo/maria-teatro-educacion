@@ -1,0 +1,15 @@
+// Contenido principal
+main
+  max-width: $max-width
+  margin: 0 auto
+  padding: $spacing-xl $spacing-md
+  min-height: calc(100vh - #{$header-height} - #{$footer-height})
+
+  @include mobile
+    padding: $spacing-lg $spacing-md
+
+// Body layout
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh

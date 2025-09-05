@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const bioEntries = await getCollection('bio');
+const aboutEntry = bioEntries.find((entry) => entry.slug === 'about') || bioEntries[0];
+
+// Renderizar el contenido para obtener el componente Content
+const { Content } = aboutEntry ? await aboutEntry.render() : { Content: null };
+---
+
+<section class="about-bio">
+    <div class="bio-content">
+        <article class="career-journey">
+            {aboutEntry ? (
+                <>
+                    <h1>{aboutEntry.data.title}</h1>
+                    {Content && <Content />}
+                </>
+            ) : (
+                <>
+                    <h1>Sobre mí</h1>
+                    <p>Contenido no disponible.</p>
+                </>
+            )}
+        </article>
+    </div>
+</section>

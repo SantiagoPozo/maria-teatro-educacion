@@ -1,0 +1,64 @@
+// Componente Talleres
+.talleres
+  .talleres-content
+    max-width: 900px
+    margin: 0 auto
+
+  .talleres-header
+    text-align: center
+    margin-bottom: $spacing-xxl
+
+
+  .taller-item
+    margin-bottom: $spacing-xxl
+    padding: $spacing-xl
+    background-color: $background-light
+    border-radius: 8px
+    @include box-shadow()
+
+    p
+      text-align: justify
+      margin-bottom: $spacing-md
+
+    ul
+      li
+        margin-bottom: $spacing-sm
+
+        strong
+          color: $primary-color
+
+  .beneficios
+    margin-top: $spacing-xxl
+
+
+  .beneficio-item
+    margin-bottom: $spacing-xl
+    padding: $spacing-lg
+    border: 1px solid $border-color
+    border-radius: 8px
+
+    h3
+      color: $secondary-color
+      margin-bottom: $spacing-md
+
+    ul
+      margin-bottom: $spacing-md
+
+      li
+        padding-left: $spacing-sm
+        position: relative
+
+        &::before
+          content: "✓"
+          position: absolute
+          left: 0
+          color: $accent-color
+          font-weight: bold
+
+    .beneficio-resumen
+      font-style: italic
+      color: $text-light
+      text-align: center
+      margin-top: $spacing-md
+      padding-top: $spacing-md
+      border-top: 1px solid $border-color

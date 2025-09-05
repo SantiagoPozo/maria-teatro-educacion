@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+
+// Obtener el contenido de claves
+const clavesEntries = await getCollection('claves');
+const clavesEntry = clavesEntries.find((entry) => entry.slug === 'claves') || clavesEntries[0];
+
+// Renderizar el contenido para obtener el componente Content
+const { Content } = clavesEntry ? await clavesEntry.render() : { Content: null };
+---
+
+<section class="claves">
+    <div class="claves-content">
+        <article class="claves-docentes">
+                <>
+                    <h1>{clavesEntry.data.title}</h1>
+                    {Content && <Content />}
+                </>
+        </article>
+    </div>
+</section>

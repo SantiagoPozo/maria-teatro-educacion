@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+
+// Obtener el contenido de la landing
+const landingEntries = await getCollection('landing');
+const inicioEntry = landingEntries.find((entry) => entry.slug === 'inicio') || landingEntries[0];
+
+// Renderizar el contenido para obtener el componente Content
+const { Content } = inicioEntry ? await inicioEntry.render() : { Content: null };
+---
+
+<section class="landing-hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            {inicioEntry ? (
+                <>
+                    <h1>{inicioEntry.data.title}</h1>
+                    <p class="hero-subtitle">{inicioEntry.data.subtitle}</p>
+                </>
+            ) : (
+                <>
+                    <h1>Teatro que Emociona, Educación que Transforma</h1>
+                    <p class="hero-subtitle">Descubre el poder del teatro como herramienta de crecimiento personal y aprendizaje</p>
+                </>
+            )}
+        </div>
+        
+        <div class="hero-image">
+            <img src="/images/photo.png" alt="María Pozo - Profesora de teatro y educación emocional" />
+        </div>
+    </div>
+</section>
+
+<section class="landing-content">
+    <div class="content-wrapper">
+        {inicioEntry && Content ? (
+            <Content />
+        ) : (
+            <p>Contenido no disponible.</p>
+        )}
+        
+        <div class="cta-section">
+            <a href="mailto:mariaptavora@gmail.com" class="cta-button">
+                {inicioEntry?.data.cta || "Contacta conmigo"}
+            </a>
+        </div>
+    </div>
+</section>

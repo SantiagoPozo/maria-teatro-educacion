@@ -1,0 +1,36 @@
+// Header principal
+header
+  nav
+    background-color: $primary-color
+    width: 100%
+    border-bottom: 1px solid $border-color
+    position: sticky
+    top: 0
+    margin: 0 auto
+    padding: 0 $spacing-md
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    min-height: $header-height
+
+    @include box-shadow()
+
+    @include mobile
+      flex-direction: column
+      padding: $spacing-sm $spacing-md
+
+    a
+      
+      padding: $spacing-sm $spacing-md 0.15rem $spacing-md
+      @include transition()
+      font-weight: 500
+      color: $text-color
+      border-bottom: 2px solid transparent
+
+      &:hover,
+      &:focus
+        border-bottom: 2px solid $text-color
+
+      @include mobile
+        padding: $spacing-xs $spacing-sm 0.15rem $spacing-md
+        font-size: $font-size-small

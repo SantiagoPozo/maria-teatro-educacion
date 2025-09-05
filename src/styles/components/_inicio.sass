@@ -1,0 +1,117 @@
+@use 'sass:color'
+
+.landing-hero
+  background: linear-gradient(135deg, color.scale($primary-color, $lightness: 20%), $primary-color)
+  padding: $spacing-xxl 0
+  min-height: 80vh
+  display: flex
+  align-items: center
+  
+  .hero-content
+    max-width: $max-width
+    margin: 0 auto
+    padding: 0 $spacing-lg
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: $spacing-xxl
+    align-items: center
+    
+    @include tablet
+      grid-template-columns: 1fr
+      gap: $spacing-xl
+      text-align: center
+    
+    .hero-text
+      h1
+        color: $text-color
+        margin-bottom: $spacing-lg
+        font-size: 3rem
+        font-weight: 700
+        line-height: 1.1
+        
+        @include mobile
+          font-size: 2rem
+      
+      .hero-subtitle
+        font-size: $font-size-large
+        color: $text-light
+        margin-bottom: $spacing-xl
+        line-height: 1.4
+        
+        @include mobile
+          font-size: $font-size-base
+    
+    .hero-image
+      display: flex
+      justify-content: center
+      
+      img
+        max-width: 100%
+        height: auto
+        border-radius: 20px
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+        transition: transform 0.3s ease
+        
+        &:hover
+          transform: scale(1.05)
+
+.landing-content
+  padding: $spacing-xxl 0
+  background: $background-color
+  
+  .content-wrapper
+    max-width: 800px
+    margin: 0 auto
+    padding: 0 $spacing-lg
+    
+    h2
+      color: $text-color
+      margin-bottom: $spacing-lg
+      text-align: center
+    
+    h3
+      color: $primary-color
+      margin: $spacing-xl 0 $spacing-lg
+    
+    p
+      margin-bottom: $spacing-lg
+      line-height: $line-height-base
+      color: $text-color
+    
+    ul
+      margin: $spacing-lg 0
+      padding-left: $spacing-xl
+      
+      li
+        margin-bottom: $spacing-sm
+        color: $text-color
+        line-height: $line-height-base
+        
+        strong
+          color: $primary-color
+    
+    .cta-section
+      text-align: center
+      margin-top: $spacing-xxl
+      padding: $spacing-xl 0
+      
+      .cta-button
+        display: inline-block
+        background: $primary-color
+        color: $text-color
+        padding: $spacing-lg $spacing-xxl
+        border-radius: 50px
+        text-decoration: none
+        font-weight: 600
+        font-size: $font-size-large
+        transition: all 0.3s ease
+        box-shadow: 0 4px 15px rgba($primary-color, 0.3)
+        
+        &:hover
+          background: color.scale($primary-color, $lightness: -10%)
+          transform: translateY(-2px)
+          box-shadow: 0 8px 25px rgba($primary-color, 0.4)
+        
+        @include mobile
+          padding: $spacing-md $spacing-xl
+          font-size: $font-size-base

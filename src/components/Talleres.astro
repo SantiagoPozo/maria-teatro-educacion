@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+
+// Obtener todos los talleres ordenados
+const talleres = await getCollection('talleres');
+const talleresOrdenados = talleres.sort((a: any, b: any) => a.data.orden - b.data.orden);
+
+// Renderizar el contenido de cada taller
+const talleresContenido = await Promise.all(
+    talleresOrdenados.map(async (taller) => {
+        const { Content } = await taller.render();
+        return {
+            ...taller,
+            Content
+        };
+    })
+);
+---
+
+<section class="talleres">
+    <div class="talleres-content">
+        <header class="talleres-header">
+            <h1>Talleres</h1>
+        </header>
+
+        <article class="talleres-list">
+            {talleresContenido.map((taller) => (
+                <section class="taller-item">
+                    <h2>{taller.data.title}</h2>
+                    {taller.data.edades && (
+                        <p class="taller-info">
+                            <strong>Edades:</strong> {taller.data.edades}
+                        </p>
+                    )}
+                    <taller.Content />
+                </section>
+            ))}
+        </article>
+    </div>
+</section>

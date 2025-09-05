@@ -2,6 +2,8 @@
 const { title = "María Pozo · Teatro y Educación Emocional" } = Astro.props;
 // Importar estilos como módulo
 import '../styles/main.sass';
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 <html lang="es">
   <head>
@@ -15,10 +17,10 @@ import '../styles/main.sass';
   <body>
     <header>
       <nav>
-        <a href="/">Inicio</a>
-        <a href="/about/">Sobre mí</a>
-        <a href="/talleres/">Talleres</a>
-        <a href="/claves/">Claves</a>
+        <a href={baseUrl}>Inicio</a>
+        <a href={`${baseUrl}about/`}>Sobre mí</a>
+        <a href={`${baseUrl}talleres/`}>Talleres</a>
+        <a href={`${baseUrl}claves/`}>Claves</a>
         <!-- <a href="/cv/">CV</a> -->
         <!-- <a href="/articulos/">Artículos</a> -->
         <!-- <a href="/colaboraciones/">Colaboraciones</a> -->
@@ -27,16 +29,16 @@ import '../styles/main.sass';
       </nav>
     </header>
 
-    <!-- Barra de redes sociales -->
+    <!-- Social bar -->
     <aside class="social-bar">
       <a href="https://www.youtube.com/@mariapozotavora4819" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube de María Pozo">
-        <img src="/icons/social/youtube.svg" alt="YouTube" />
+        <img src={`${baseUrl}icons/social/youtube.svg`} alt="YouTube" />
       </a>
       <a href="https://www.instagram.com/mariaptavora/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de María Pozo">
-        <img src="/icons/social/instagram.svg" alt="Instagram" />
+        <img src={`${baseUrl}icons/social/instagram.svg`} alt="Instagram" />
       </a>
       <a href="mailto:mariaptavora@gmail.com" aria-label="Enviar email a María Pozo">
-        <img src="/icons/social/email.svg" alt="Email" />
+        <img src={`${baseUrl}icons/social/email.svg`} alt="Email" />
       </a>
     </aside>
 

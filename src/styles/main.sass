@@ -1,31 +1,31 @@
-// Arquitectura 7-1 de Sass
+// Arquitectura 7-1 de Sass con @use moderno
 // https://sass-guidelin.es/#architecture
 
-// 1. Abstracts
-@import 'abstracts/variables'
-@import 'abstracts/mixins'
-@import 'abstracts/functions'
+// 1. Abstracts (se cargan primero para usar variables y mixins)
+@use 'abstracts/variables' as *
+@use 'abstracts/mixins' as *
+@use 'abstracts/functions' as *
 
 // 2. Vendors
-@import 'vendors/external'
+@use 'vendors/external'
 
 // 3. Base
-@import 'base/reset'
-@import 'base/typography'
+@use 'base/reset'
+@use 'base/typography'
 
 // 4. Layout
-@import 'layout/header'
-@import 'layout/footer'
-@import 'layout/main'
-@import 'layout/social-bar'
+@use 'layout/header'
+@use 'layout/footer'
+@use 'layout/main'
+@use 'layout/social-bar'
 
 // 5. Components
-@import 'components/about'
-@import 'components/talleres'
-@import 'components/claves'
-@import 'components/inicio'
+@use 'components/about'
+@use 'components/talleres'
+@use 'components/claves'
+@use 'components/inicio'
 
 // 6. Pages
 
 // 7. Themes
-@import 'themes/default'
+@use 'themes/default'

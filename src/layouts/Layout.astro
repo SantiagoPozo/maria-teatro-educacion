@@ -1,5 +1,7 @@
 ---
 const { title = "María Pozo · Teatro y Educación Emocional" } = Astro.props;
+// Importar estilos como módulo
+import '../styles/main.sass';
 ---
 <html lang="es">
   <head>
@@ -9,7 +11,6 @@ const { title = "María Pozo · Teatro y Educación Emocional" } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles/main.sass" />
   </head>
   <body>
     <header>

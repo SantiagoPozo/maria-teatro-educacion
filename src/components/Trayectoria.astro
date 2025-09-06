@@ -1,0 +1,41 @@
+<!-- filepath: src/components/Trayectoria.astro -->
+---
+import { getCollection } from 'astro:content';
+
+// Obtener todos los elementos de trayectoria ordenados
+const trayectoria = await getCollection('trayectoria');
+const trayectoriaOrdenada = trayectoria.sort((a: any, b: any) => (a.data.orden || 0) - (b.data.orden || 0));
+
+// Renderizar el contenido de cada elemento
+const trayectoriaContenido = await Promise.all(
+    trayectoriaOrdenada.map(async (item) => {
+        const { Content } = await item.render();
+        return {
+            ...item,
+            Content
+        };
+    })
+);
+---
+
+<section class="trayectoria">
+    <div class="trayectoria-content">
+        <header class="trayectoria-header">
+            <h1>Mi Trayectoria</h1>
+        </header>
+
+        <article class="trayectoria-list">
+            {trayectoriaContenido.map((item) => (
+                <section class="trayectoria-item">
+                    <h2>{item.data.title}</h2>
+                    {item.data.description && (
+                        <p class="trayectoria-description">
+                            {item.data.description}
+                        </p>
+                    )}
+                    <item.Content />
+                </section>
+            ))}
+        </article>
+    </div>
+</section>

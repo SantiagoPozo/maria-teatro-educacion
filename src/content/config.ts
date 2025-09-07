@@ -20,8 +20,8 @@ const landingCollection = defineCollection({
   }),
 });
 
-// Colección para claves
-const clavesCollection = defineCollection({
+// Colección para beneficios (antes claves)
+const beneficiosCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
@@ -57,7 +57,7 @@ const trayectoriaCollection = defineCollection({
 export const collections = {
   bio: bioCollection,
   landing: landingCollection,
-  claves: clavesCollection,
+  beneficios: beneficiosCollection,
   talleres: talleresCollection,
   trayectoria: trayectoriaCollection,
 };

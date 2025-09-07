@@ -12,27 +12,7 @@ const { Content } = inicioEntry ? await inicioEntry.render() : { Content: null }
 const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<section class="landing-hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            {inicioEntry ? (
-                <>
-                    <h1>{inicioEntry.data.title}</h1>
-                    <p class="hero-subtitle">{inicioEntry.data.subtitle}</p>
-                </>
-            ) : (
-                <>
-                    <h1>Teatro que Emociona, Educación que Transforma</h1>
-                    <p class="hero-subtitle">Descubre el poder del teatro como herramienta de crecimiento personal y aprendizaje</p>
-                </>
-            )}
-        </div>
-        
-        <div class="hero-image">
-            <img src={`${baseUrl}images/photo.png`} alt="María Pozo - Profesora de teatro y educación emocional" />
-        </div>
-    </div>
-</section>
+
 
 <section class="landing-content">
     <div class="content-wrapper">
@@ -42,10 +22,6 @@ const baseUrl = import.meta.env.BASE_URL;
             <p>Contenido no disponible.</p>
         )}
         
-        <div class="cta-section">
-            <a href="mailto:mariaptavora@gmail.com" class="cta-button">
-                {inicioEntry?.data.cta || "Contacta conmigo"}
-            </a>
-        </div>
+
     </div>
 </section>

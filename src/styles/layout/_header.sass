@@ -1,8 +1,10 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
+@use 'sass:color'
 
 // Header principal
 header
+  // Navigation
   nav
     background-color: $primary-color
     width: 100%
@@ -15,6 +17,7 @@ header
     justify-content: space-evenly
     align-items: center
     min-height: $header-height
+    z-index: 100
 
     @include box-shadow()
 
@@ -31,13 +34,92 @@ header
 
       &:hover,
       &:focus,
-      &.active                    // ← Nueva clase para página activa
+      &.active
         border-bottom: 2px solid $text-color
 
-      &.active                    // ← Estilo específico para activo
+      &.active
         font-weight: 600
-        color: $text-color   // Si tienes un color más oscuro
+        color: $text-color
 
       @include mobile
         padding: $spacing-xs $spacing-sm 0.15rem $spacing-md
         font-size: $font-size-small
+
+  // Hero section (movida desde _inicio.sass)
+  .landing-hero
+    background: linear-gradient(135deg, color.scale($primary-color, $lightness: 20%), $primary-color)
+    width: 100%
+    padding: $spacing-xxl 0
+    margin: 0
+    display: flex
+    align-items: center
+    .hero-content
+      max-width: $max-width
+      margin: 0 auto
+      padding: 0 $spacing-lg
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: $spacing-xxl
+      align-items: center
+
+      @include tablet
+        grid-template-columns: 1fr
+        gap: $spacing-xl
+        text-align: center
+
+      @include mobile
+        grid-template-columns: 1fr
+        gap: $spacing-md
+        text-align: center
+      
+      .hero-text
+        -webkit-background-clip: text
+        animation: h1-art-pop 2.5s cubic-bezier(.68,-0.55,.27,1.55) 1
+        h1
+          height: 100%
+          color: $text-color
+          font-size: 2rem
+          font-weight: 700
+          line-height: 1.1
+          letter-spacing: 2px
+          background-clip: text
+        
+          @include mobile
+            font-size: 1.5rem
+
+        .hero-subtitle
+          font-size: $font-size-large
+          color: $text-color
+          margin-bottom: $spacing-xl
+          line-height: 1.4
+          
+          @include mobile
+            font-size: $font-size-base
+      
+      .hero-image
+        display: flex
+        justify-content: center
+        
+        img
+          max-width: 400px
+          height: auto
+          border-radius: 20px
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+          transition: transform 0.3s ease
+          
+          &:hover
+            transform: scale(1.05)
+
+      @keyframes h1-art-pop
+        0%
+          letter-spacing: 0
+          opacity: 0
+          transform: scale(0.8) rotate(-2deg)
+        60%
+          letter-spacing: 6px
+          opacity: 1
+          transform: scale(1.08) rotate(2deg)
+        100%
+          letter-spacing: 2px
+          opacity: 1
+          transform: scale(1) rotate(0)

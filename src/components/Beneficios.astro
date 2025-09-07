@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+
+// Obtener el contenido de beneficios
+const beneficiosEntries = await getCollection('beneficios');
+const beneficiosEntry = beneficiosEntries.find((entry) => entry.slug === 'beneficios') || beneficiosEntries[0];
+
+// Renderizar el contenido para obtener el componente Content
+const { Content } = beneficiosEntry ? await beneficiosEntry.render() : { Content: null };
+---
+
+<section class="beneficios">
+    <div class="beneficios-content">
+        <article class="beneficios-docentes">
+                <>
+                    <h1>{beneficiosEntry.data.title}</h1>
+                    {Content && <Content />}
+                </>
+        </article>
+    </div>
+</section>

@@ -2,7 +2,7 @@
 title: "Talleres de Educación Emocional a través del teatro"
 description: "Desarrollo emocional y social a través del arte dramático"
 categoria: "educacion-emocional"
-edades: "1º a 6º de primaria"
+edades: "Adapatable a todas las edades"
 duracion: "Sesiones adaptadas"
 orden: 1
 ---
@@ -13,11 +13,11 @@ A través del teatro, las personas participantes aprenden a reconocer y expresar
 
 Los talleres acercan el arte dramático y además proporcionan herramientas para conocerse mejor, relacionarse positivamente con las demás personas y gestionar las emociones de manera consciente y respetuosa.
 
-## Beneficios
+## Objetivos
 
-- **Desarrolla la empatía** poniéndose en la piel de diferentes personajes.
-- **Fomenta la autoestima y la confianza** a través de la expresión en escena.
-- **Ayuda a gestionar emociones** mediante dinámicas teatrales vivenciales.
-- **Potencia la colaboración y el respeto** en dinámicas grupales.
+- **Desarrollar la empatía** poniéndose en la piel de diferentes personajes.
+- **Fomentar la autoestima y la confianza** a través de la expresión en escena.
+- **Ayudar a gestionar emociones** mediante dinámicas teatrales vivenciales.
+- **Potenciar la colaboración y el respeto** en dinámicas grupales.
 
 > El teatro aquí se convierte en un espejo emocional, donde cada persona se reconoce y aprende a comprender a las demás.

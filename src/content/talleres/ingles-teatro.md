@@ -19,11 +19,11 @@ Estos talleres acercan el idioma inglés a los niños y niñas de una forma natu
 
 **Habilidades sociales:** El trabajo en grupo fomenta la cooperación, el respeto y la comunicación, a la vez que se practica una nueva lengua.
 
-## Beneficios
+## Objetivos
 
-- **Aprendizaje natural** del inglés a través del juego, la música y la dramatización.
-- **Mejora de la memoria y la comprensión** al asociar palabras con gestos, movimientos y emociones.
-- **Desarrollo de la creatividad y la imaginación**, experimentando con personajes e historias.
-- **Mayor confianza y autoestima** al expresarse en un idioma nuevo en un entorno seguro y divertido.
-- **Fomento de habilidades sociales** como la cooperación, el respeto y la escucha activa.
-- **Conexión positiva con el idioma**, generando motivación y disfrute al aprender.
+- **Aprender inglés de forma natural** a través del juego, la música y la dramatización.
+- **Mejorar la memoria y la comprensión** al asociar palabras con gestos, movimientos y emociones.
+- **Desarrollar la creatividad y la imaginación**, experimentando con personajes e historias.
+- **Aumentar la confianza y la autoestima** al expresarse en un idioma nuevo en un entorno seguro y divertido.
+- **Fomentar las habilidades sociales** como la cooperación, el respeto y la escucha activa.
+- **Conectar positivamente con el idioma**, generando motivación y disfrute al aprender.

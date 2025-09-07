@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@use 'sass:color'
+
+.cta-section
+  text-align: center
+  padding: $spacing-xl 0
+  margin-top: 0
+  
+  .cta-button
+    display: inline-block
+    background: $primary-color
+    color: $text-color
+    padding: $spacing-lg $spacing-xxl
+    border-radius: 50px
+    text-decoration: none
+    font-weight: 600
+    font-size: $font-size-large
+    transition: all 0.3s ease
+    box-shadow: 0 4px 15px rgba($primary-color, 0.3)
+    
+    &:hover
+      background: color.scale($primary-color, $lightness: -10%)
+      transform: translateY(-2px)
+      box-shadow: 0 8px 25px rgba($primary-color, 0.4)
+    
+    @include mobile
+      padding: $spacing-md $spacing-xl
+      font-size: $font-size-base

@@ -1,26 +1,17 @@
 ---
-title: "Teatro que Emociona, Educación que Transforma"
-subtitle: "Descubre el poder del teatro como herramienta de crecimiento personal y aprendizaje"
-description: "Landing page principal de María Pozo"
-cta: "Contacta conmigo"
+title: "Sobre mí"
+description: "Talleres de Teatro y Educación Emocional en colegios"
 orden: 1
 ---
 
-## Bienvenida al mundo del teatro educativo
+# Talleres de Teatro y Educación Emocional en colegios
 
-Soy **María Pozo**, profesora especializada en **educación emocional a través del teatro**. Mi pasión es acompañar a niños, niñas y jóvenes en su desarrollo emocional, utilizando el arte dramático como puente hacia el autoconocimiento, la creatividad y las habilidades sociales.
+## El teatro como herramienta educativa en Infantil y Primaria
 
-### ¿Por qué teatro y educación emocional?
+Soy María Pozo Távora, profesora de teatro especializada en educación emocional en el aula. Con más de 15 años de experiencia docente y 4 años facilitando talleres de teatro en colegios, estoy convencida de que el teatro es una herramienta educativa capaz de transformar el aula.
 
-El teatro no es solo representación; es **transformación**. En mis talleres, cada participante descubre su propia voz, aprende a gestionar sus emociones y desarrolla herramientas que le acompañarán toda la vida.
+Mis talleres ofrecen un espacio en Infantil y Primaria donde explorar y gestionar emociones a través de dinámicas teatrales. De esta forma, fomentamos la educación emocional, la empatía, el respeto y la cohesión de grupo, mientras potenciamos la creatividad.
 
-- **Autoestima y confianza** a través de la expresión escénica
-- **Empatía y respeto** mediante la interpretación de diferentes personajes
-- **Comunicación efectiva** y escucha activa
-- **Creatividad sin límites** para resolver conflictos y expresar ideas.
+Si eres parte de un claustro, equipo directivo o AFA y buscas talleres innovadores para tu centro educativo, donde el Teatro y la Educación Emocional se unen para enriquecer el aprendizaje, estaré encantada de acompañarte en este proceso.
 
-### Mi compromiso contigo
-
-Cada taller, cada sesión, está diseñada para ser un **espacio seguro** donde jugar, sentir y pensar. Porque creo firmemente que para enseñar es imprescindible seguir aprendiendo, y que el aula debe ser un lugar donde transformar la experiencia de aprender.
-
-**¿Estás lista para comenzar este viaje emocional?**
+> _"El teatro se siente, se vive y te transforma."_

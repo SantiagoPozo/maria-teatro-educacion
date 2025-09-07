@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+// Componente beneficios
+.beneficios
+  .beneficios-content
+    max-width: 800px
+    margin: 0 auto
+
+  .beneficios-docentes
+
+    p
+      text-align: justify
+      margin-bottom: $spacing-lg
+
+      strong
+        margin-bottom: $spacing-xs
+
+  ul
+    list-style: none
+    li
+      margin-bottom: $spacing-sm
+      padding-left: $spacing-lg
+      position: relative
+      // size of the icon: 1rem
+      background-repeat: no-repeat
+      background-size: 1rem
+      background-position: left center
+
+      &::before
+        content: ""
+        position: absolute
+        left: 0
+        top: 0.8em
+        transform: translateY(-50%)
+        width: 1rem
+        height: 1rem
+        background-image: url('../../public/icons/figures/pomelo.svg')
+        background-size: contain
+        background-repeat: no-repeat
+
+
+
+h2
+  font-size: 1.3rem

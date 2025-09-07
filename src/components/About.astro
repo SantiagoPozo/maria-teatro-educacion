@@ -7,7 +7,7 @@ const aboutEntry = bioEntries.find((entry) => entry.slug === 'about') || bioEntr
 // Renderizar el contenido para obtener el componente Content
 const { Content } = aboutEntry ? await aboutEntry.render() : { Content: null };
 ---
-
+<>
 <section class="about-bio">
     <div class="bio-content">
         <article class="career-journey">
@@ -25,3 +25,10 @@ const { Content } = aboutEntry ? await aboutEntry.render() : { Content: null };
         </article>
     </div>
 </section>
+<div id="cv-download">
+
+<a href="https://drive.google.com/file/d/1bfzzWMXof_vJJPBzJ72tTf7VpIt3N6O7/view?usp=drivesdk">
+    <button class="cv-button">Aquí puedes descargar mi CV</button>
+</a>
+</div>  
+</>

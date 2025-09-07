@@ -1,10 +1,8 @@
 ---
-title: "Trayectoria"
+title: "Formación Teatral"
 description: "Mi formación teatral y experiencia docente"
 orden: 1
 ---
-
-## Teatral
 
 **The Barrow Group, New York, EEUU**  
 _Formación actoral_  
@@ -28,7 +26,7 @@ Profesora: María Marín, 2022–2023
 **Curso Laboratorio Teatral**  
 Profesor: Santi Rivera, 2023–2024
 
-## Docente
+## Trayectoria Docente
 
 **Profesora de teatro**
 

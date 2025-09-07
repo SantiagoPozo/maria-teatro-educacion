@@ -13,11 +13,11 @@ Cada sesión está diseñada para aprender a argumentar con claridad, reflexiona
 
 Aprender a escuchar de forma activa, a expresarse con respeto y a compartir una opinión, fomentando así la formación de personas conscientes, críticas y colaborativas.
 
-## Beneficios
+## Objetivos
 
-- **Fomenta el pensamiento crítico** y la libre interpretación de textos.
-- **Desarrolla la escucha activa** y el respeto a diferentes puntos de vista.
-- **Potencia la expresión oral** en un entorno de confianza.
-- **Refuerza el sentido de comunidad y diálogo**.
+- **Fomentar el pensamiento crítico** y la libre interpretación de textos.
+- **Desarrollar la escucha activa** y el respeto a diferentes puntos de vista.
+- **Potenciar la expresión oral** en un entorno de confianza.
+- **Reforzar el sentido de comunidad y diálogo** en un espacio seguro.
 
 > El teatro aporta herramientas para dar voz, gesto y vida a las ideas, creando debates más vivos y significativos.

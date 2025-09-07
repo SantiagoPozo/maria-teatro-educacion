@@ -15,11 +15,11 @@ Además, promovemos la lectura como complemento esencial: leyendo y analizando t
 
 En este taller, la creatividad y la práctica constante son los protagonistas: cada historia y cada palabra escrita es un paso hacia la expresión personal y el amor por la escritura y la lectura.
 
-## Beneficios
+## Objetivos
 
-- **Estimula la imaginación y la creatividad** al escribir desde experiencias sensoriales.
-- **Promueve el placer por la escritura y la lectura** desde un enfoque lúdico.
-- **Refuerza la atención plena** al observar y describir con los sentidos.
-- **Desarrolla la confianza para compartir ideas propias** en un espacio seguro.
+- **Estimular la imaginación y la creatividad** al escribir desde experiencias sensoriales.
+- **Promover el placer por la escritura y la lectura** desde un enfoque lúdico.
+- **Reforzar la atención plena** al observar y enfocar la atención a través los sentidos.
+- **Desarrollar la confianza para compartir ideas propias** en un espacio seguro.
 
 > El teatro acompaña la escritura al convertir los textos en experiencias vivas y compartidas.

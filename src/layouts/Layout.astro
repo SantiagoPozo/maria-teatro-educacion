@@ -40,16 +40,28 @@ const isActive = (path: string) => {
         <a href={baseUrl} class={isActive(baseUrl) ? 'active' : ''}>Inicio</a>
         <a href={`${baseUrl}about/`} class={isActive('about') ? 'active' : ''}>Sobre mí</a>
         <a href={`${baseUrl}talleres/`} class={isActive('talleres') ? 'active' : ''}>Talleres</a>
-        <a href={`${baseUrl}claves/`} class={isActive('claves') ? 'active' : ''}>Claves</a>
+        <a href={`${baseUrl}beneficios/`} class={isActive('claves') ? 'active' : ''}>Beneficios</a>
         <a href={`${baseUrl}trayectoria/`} class={isActive('trayectoria') ? 'active' : ''}>Trayectoria</a>
       </nav>
+      <section class="landing-hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Talleres de Teatro y Educación Emocional en Colegios</h1>
+            <p class="hero-subtitle">El Teatro como herramienta educativa en Infantil y Primaria.</p>
+        </div>
+        
+        <div class="hero-image">
+            <img src={`${baseUrl}images/photo.png`} alt="María Pozo - Profesora de teatro y educación emocional" />
+        </div>
+    </div>
+</section>
     </header>
 
     <!-- Social bar -->
     <aside class="social-bar">
-      <a href="https://www.youtube.com/@mariapozotavora4819" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube de María Pozo">
+      <!-- <a href="https://www.youtube.com/@mariapozotavora4819" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube de María Pozo">
         <img src={`${baseUrl}icons/social/youtube.svg`} alt="YouTube" />
-      </a>
+      </a> -->
       <a href="https://www.instagram.com/mariaptavora/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de María Pozo">
         <img src={`${baseUrl}icons/social/instagram.svg`} alt="Instagram" />
       </a>
@@ -68,7 +80,11 @@ const isActive = (path: string) => {
         <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="currentColor"/>
       </svg>
     </button>
-    
+    <div class="cta-section">
+      <a href="mailto:mariaptavora@gmail.com" class="cta-button">
+          Contacta conmigo
+      </a>
+    </div>
     <footer>
       <p>&copy; {new Date().getFullYear()} María Pozo Távora - Teatro y Educación Emocional</p>
       <p>Webmaster y desarrollo: <a href="https://santiago-pozo.com" target="_blank" rel="noopener noreferrer">Santiago Pozo</a></p>

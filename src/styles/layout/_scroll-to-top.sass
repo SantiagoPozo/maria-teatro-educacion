@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+@use 'sass:color'
+
+.scroll-to-top
+  position: fixed
+  bottom: $spacing-lg
+  right: $spacing-lg
+  width: 80px
+  height: 80px
+  border-radius: 50%
+  border: 2px solid white
+  background: $primary-color
+  cursor: pointer
+  z-index: 1000
+  display: flex
+  align-items: center
+  justify-content: center
+  
+  // Inicialmente oculto
+  opacity: 0
+  visibility: hidden
+  transform: translateY(100px)
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+  
+  // Cuando es visible
+  &.visible
+    opacity: 0.8
+    visibility: visible
+    transform: translateY(0)
+  
+  // Estilos del icono
+  svg
+    color: white
+    transition: transform 0.2s ease
+  
+  // Efectos hover
+  &:hover
+    background: color.scale($primary-color, $lightness: -10%)
+    transform: translateY(-2px)
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3)
+    
+    svg
+      transform: translateY(-2px)
+  
+  &:active
+    transform: translateY(0)
+    
+  // Responsive
+  @include mobile
+    bottom: $spacing-md
+    right: $spacing-md
+    width: 60px
+    height: 60px
+    
+    svg
+      width: 20px
+      height: 20px
+
+  // En tablets y móviles, asegurar que no interfiera con social-bar
+  @include tablet
+    right: $spacing-md
+    
+  @include mobile
+    // La social-bar se oculta en móvil, así que no hay conflicto
+    right: $spacing-md

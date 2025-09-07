@@ -4,6 +4,22 @@ const { title = "María Pozo · Teatro y Educación Emocional" } = Astro.props;
 import '../styles/main.sass';
 
 const baseUrl = import.meta.env.BASE_URL;
+
+// Obtener la URL actual para determinar la página activa
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  // Para la página principal (más específica)
+  if (path === baseUrl) {
+    return currentPath === baseUrl || currentPath === '/' || currentPath === baseUrl.replace(/\/$/, '');
+  }
+  
+  // Para otras páginas
+  const cleanPath = path.replace(baseUrl, '').replace(/\/$/, '');
+  const cleanCurrentPath = currentPath.replace(baseUrl, '').replace(/\/$/, '');
+  
+  return cleanCurrentPath.startsWith(cleanPath) && cleanPath.length > 0;
+};
 ---
 <html lang="es">
   <head>
@@ -21,15 +37,11 @@ const baseUrl = import.meta.env.BASE_URL;
   <body>
     <header>
       <nav>
-        <a href={baseUrl}>Inicio</a>
-        <a href={`${baseUrl}about/`}>Sobre mí</a>
-        <a href={`${baseUrl}talleres/`}>Talleres</a>
-        <a href={`${baseUrl}claves/`}>Claves</a>
-        <a href={`${baseUrl}trayectoria/`}>Trayectoria</a>
-        <!-- <a href="{`${baseUrl}cv/">CV</a> -->
-        <!-- <a href="articulos/">Artículos</a> -->
-        <!-- <a href="colaboraciones/">Colaboraciones</a> -->
-        <!-- <a href="contacto/">Contacto</a> -->
+        <a href={baseUrl} class={isActive(baseUrl) ? 'active' : ''}>Inicio</a>
+        <a href={`${baseUrl}about/`} class={isActive('about') ? 'active' : ''}>Sobre mí</a>
+        <a href={`${baseUrl}talleres/`} class={isActive('talleres') ? 'active' : ''}>Talleres</a>
+        <a href={`${baseUrl}claves/`} class={isActive('claves') ? 'active' : ''}>Claves</a>
+        <a href={`${baseUrl}trayectoria/`} class={isActive('trayectoria') ? 'active' : ''}>Trayectoria</a>
       </nav>
     </header>
 
@@ -50,9 +62,38 @@ const baseUrl = import.meta.env.BASE_URL;
       <slot />
     </main>
 
+    <!-- Botón volver arriba -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver arriba">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="currentColor"/>
+      </svg>
+    </button>
+    
     <footer>
       <p>&copy; {new Date().getFullYear()} María Pozo Távora - Teatro y Educación Emocional</p>
       <p>Webmaster y desarrollo: <a href="https://santiago-pozo.com" target="_blank" rel="noopener noreferrer">Santiago Pozo</a></p>
     </footer>
+
+    <script>
+      // Script para el botón scroll to top
+      const scrollToTopButton = document.getElementById('scroll-to-top');
+      
+      // Mostrar/ocultar el botón según el scroll
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollToTopButton?.classList.add('visible');
+        } else {
+          scrollToTopButton?.classList.remove('visible');
+        }
+      });
+      
+      // Funcionalidad de scroll suave al hacer click
+      scrollToTopButton?.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
   </body>
 </html>

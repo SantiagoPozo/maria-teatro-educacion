@@ -23,7 +23,6 @@ header
       padding: $spacing-sm $spacing-md
 
     a
-      
       padding: $spacing-sm $spacing-md 0.15rem $spacing-md
       @include transition()
       font-weight: 500
@@ -31,8 +30,13 @@ header
       border-bottom: 2px solid transparent
 
       &:hover,
-      &:focus
+      &:focus,
+      &.active                    // ← Nueva clase para página activa
         border-bottom: 2px solid $text-color
+
+      &.active                    // ← Estilo específico para activo
+        font-weight: 600
+        color: $text-color   // Si tienes un color más oscuro
 
       @include mobile
         padding: $spacing-xs $spacing-sm 0.15rem $spacing-md

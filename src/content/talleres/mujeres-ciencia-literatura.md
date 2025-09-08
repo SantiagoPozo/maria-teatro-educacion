@@ -5,6 +5,7 @@ categoria: "igualdad-genero"
 edades: "Adaptable a diferentes edades"
 duracion: "Sesiones teatrales"
 orden: 4
+id: "mujeres-ciencia-literatura"
 ---
 
 Estos talleres nacen de la necesidad de acercar la vida y obra de mujeres destacadas en la ciencia y la literatura; se representan pequeñas escenas y diálogos teatrales que hacen que sus historias cobren vida de manera divertida y memorable.

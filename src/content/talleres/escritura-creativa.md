@@ -5,6 +5,7 @@ categoria: "escritura-creativa"
 edades: "Adaptable a diferentes edades"
 duracion: "Sesiones prácticas"
 orden: 2
+id: "escritura-creativa"
 ---
 
 Este taller está diseñado para que en el aula se explore la escritura desde la creatividad y la imaginación, usando los cinco sentidos como guía para inspirar las historias. Cada sesión ofrece actividades prácticas que fomentan la observación, la descripción sensorial y la expresión personal, permitiendo que cada participante escriba con libertad y sin miedo a equivocarse.

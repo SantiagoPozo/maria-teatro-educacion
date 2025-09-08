@@ -45,7 +45,7 @@ header
         padding: $spacing-xs $spacing-sm 0.15rem $spacing-md
         font-size: $font-size-small
 
-  // Hero section (movida desde _inicio.sass)
+  // Hero section
   .landing-hero
     background: linear-gradient(135deg, color.scale($primary-color, $lightness: 20%), $primary-color)
     width: 100%
@@ -85,13 +85,14 @@ header
           background-clip: text
         
           @include mobile
-            font-size: 1.5rem
+            font-size: $font-size-h2
 
         .hero-subtitle
           font-size: $font-size-large
           color: $text-color
           margin-bottom: $spacing-xl
           line-height: 1.4
+          text-align: center
           
           @include mobile
             font-size: $font-size-base
@@ -106,6 +107,8 @@ header
           border-radius: 20px
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
           transition: transform 0.3s ease
+          @include mobile
+            max-width: calc(100% - 40px)
           
           &:hover
             transform: scale(1.05)

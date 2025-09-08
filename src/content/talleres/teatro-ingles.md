@@ -5,6 +5,7 @@ categoria: "idiomas"
 edades: "Infantil y Primer Ciclo de Primaria"
 duracion: "Sesiones lúdicas"
 orden: 5
+id: "ingles"
 ---
 
 Estos talleres acercan el idioma inglés a los niños y niñas de una forma natural, divertida y vivencial. A través del juego, la imaginación y el teatro, el aprendizaje se convierte en una experiencia significativa y motivadora.

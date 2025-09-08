@@ -9,8 +9,53 @@
 
   .talleres-header
     text-align: center
-    margin-bottom: $spacing-xxl
+    margin-bottom: $spacing-xl
 
+  // Navigation with icons
+  .talleres-nav
+    display: grid
+    justify-items: center
+    margin-bottom: $spacing-xxl
+    grid-template-columns: repeat(3, 1fr)
+    margin-left: auto
+    margin-right: auto
+    
+    @include desktop
+      max-width: 600px
+
+  .taller-nav-link
+    display: block
+    border-radius: 12px
+    border: 2px solid transparent
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    position: relative
+    overflow: hidden
+
+    
+    &:hover
+      transform: translateY(-4px) scale(1.05)
+      border-color: $primary-color
+      @include box-shadow()
+      
+      &::before
+        left: 100%
+    
+    &:active
+      transform: translateY(-2px) scale(1.02)
+      transition-duration: 0.1s
+
+  .taller-icon
+    width: 180px
+    height: 180px
+    object-fit: contain
+    transition: filter 0.3s ease
+    
+    @include desktop
+      width: 180px
+      height: 180px
+    
+    .taller-nav-link:hover &
+      filter: grayscale(0%) brightness(1.1)
 
   .taller-item
     margin-bottom: $spacing-xxl

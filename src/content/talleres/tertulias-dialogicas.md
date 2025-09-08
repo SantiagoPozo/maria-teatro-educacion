@@ -5,6 +5,7 @@ categoria: "comunicacion"
 edades: "Adaptable a diferentes edades"
 duracion: "Sesiones de diálogo"
 orden: 3
+id: "tertulias-dialogicas"
 ---
 
 En las Tertulias Dialógicas se ofrece un espacio seguro y enriquecedor donde las personas pueden dialogar, pensar y expresarse libremente. A través de conversaciones guiadas y debates sobre temas diversos, promovemos el pensamiento crítico, la escucha activa, la libre expresión y el respeto por las opiniones de las demás personas.

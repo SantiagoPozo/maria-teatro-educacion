@@ -5,6 +5,7 @@ categoria: "educacion-emocional"
 edades: "Adapatable a todas las edades"
 duracion: "Sesiones adaptadas"
 orden: 1
+id: "educacion-emocional"
 ---
 
 Estos talleres están diseñados para grupos de 1.º a 6.º de primaria con el objetivo de que exploren y desarrollen sus emociones de manera activa y creativa. Durante las sesiones combinamos juegos teatrales, dinámicas de expresión corporal, voz y movimiento, y ejercicios de improvisación adaptados a cada edad.

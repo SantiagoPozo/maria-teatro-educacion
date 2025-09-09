@@ -4,6 +4,68 @@ description: "Mi formación teatral y experiencia docente"
 orden: 1
 ---
 
+## Trayectoria en Centros Educativos
+
+### CURSO 2022-2023 en España
+
+CEIP Arias Montano, Sevilla  
+Talleres de Educación Emocional a través del Teatro en inglés, de Infantil a 6º de Primaria.
+
+CEIP Pio XII, Sevilla  
+Talleres de Educación Emocional a través del Teatro, en varias etapas de Educación Primaria.
+
+IES Bellavista, Sevilla  
+Talleres de Educación Emocional a través del Teatro, en varias etapas de Educación Primaria.
+
+CEIP Carlos V, Sevilla  
+Talleres de Teatro, en 3º y 4º de Primaria.
+
+CEIP Adriano, Sevilla  
+Talleres de teatro, en 6º de Primaria e Infantil 4 años.
+
+CEIP Pedro Garfias, Sevilla  
+Talleres de Tertulia Dialógica, “El Principito” en 3º de Primaria y “El Mago de Oz” en 4º de Primaria.
+
+### CURSO 2023-2024 en España
+
+CEIP Maestro Juan Marín de Vargas, Las Cabezas de San Juan.  
+Talleres de Técnicas de Estudio, en 5º y 6º de Primaria.
+
+IES Bellavista, Sevilla.  
+Talleres de Educación Emocional a través del Teatro, en 2º de ESO.
+
+CEIP Fernán Caballero, Sevilla.  
+Taller “Fernán Caballero era Cecilia Bóhl de Faber”, de Infantil a 6º de Primaria.
+
+CEIP Joaquín Turina, Sevilla.  
+Recreos “Aula Específica Anfitriona”
+
+CEIP Miguel Hernández, Mairena del Aljarafe.  
+Títeres “Las Olimpiadas”, Aula Arcoiris
+
+CEIP Pedro Garfias, Sevilla.  
+Talleres de Tertulia Dialógica, “El Principito” en 3º de Primaria y “El Mago de Oz” en 4º de Primaria.
+
+CEIP Sánchez Mejías, Sevilla.  
+Talleres de promoción del ámbito sociolingüístico a través del teatro, 4º y 5º de Primaria.
+
+### CURSO 2024-2025 EN EEUU
+
+Johnson Park School, Princeton  
+Talleres de Teatro en todas las etapas de Educación Primaria.
+
+Riverside Elementary School, Princeton.  
+Talleres de Teatro en todas las etapas de Educación Primaria.
+
+CEIP Pio XII, Sevilla  
+Primavera 2023  
+Taller de Escritura Creativa, en varias etapas.
+
+Trayectoria en Colegios.md
+Displaying Trayectoria en Colegios.md.
+
+## Formación teatral
+
 **The Barrow Group, New York, EEUU**  
 _Formación actoral_  
 Profesor: Ron Piretti, 2025

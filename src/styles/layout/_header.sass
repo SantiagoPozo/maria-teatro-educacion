@@ -18,12 +18,13 @@ header
     align-items: center
     min-height: $header-height
     z-index: 100
+    flex-wrap: wrap
 
     @include box-shadow()
 
     @include mobile
-      flex-direction: column
-      padding: $spacing-sm $spacing-md
+      padding: $spacing-sm $spacing-sm
+
 
     a
       padding: $spacing-sm $spacing-md 0.15rem $spacing-md
@@ -42,55 +43,54 @@ header
         color: $text-color
 
       @include mobile
-        padding: $spacing-xs $spacing-sm 0.15rem $spacing-md
-        font-size: $font-size-small
+        font-size: 14pt
+        padding: $spacing-sm $spacing-sm 0.15rem $spacing-sm
 
   // Hero section
   .landing-hero
     background: linear-gradient(135deg, color.scale($primary-color, $lightness: 20%), $primary-color)
     width: 100%
-    padding: $spacing-xxl 0
+    padding: $spacing-md 0
     margin: 0
     display: flex
     align-items: center
+
     .hero-content
       max-width: $max-width
       margin: 0 auto
-      padding: 0 $spacing-lg
-      display: grid
-      grid-template-columns: 1fr 1fr
-      gap: $spacing-xxl
+      padding: 0 
+      display: flex
+      gap: $spacing-md
       align-items: center
 
       @include tablet
-        grid-template-columns: 1fr
+        flex-direction: column
         gap: $spacing-xl
         text-align: center
 
       @include mobile
-        grid-template-columns: 1fr
+        flex-direction: column
         gap: $spacing-md
         text-align: center
       
       .hero-text
-        -webkit-background-clip: text
-        animation: h1-art-pop 2.5s cubic-bezier(.68,-0.55,.27,1.55) 1
+        padding: $spacing-md
         h1
           height: 100%
           color: $text-color
-          font-size: 2rem
+          font-size: $font-size-h3
           font-weight: 700
           line-height: 1.1
           letter-spacing: 2px
-          background-clip: text
         
           @include mobile
-            font-size: $font-size-h2
+            font-size: $font-size-h3
 
         .hero-subtitle
+          padding: $spacing-md
           font-size: $font-size-large
           color: $text-color
-          margin-bottom: $spacing-xl
+          margin-bottom: 0
           line-height: 1.4
           text-align: center
           
@@ -98,31 +98,19 @@ header
             font-size: $font-size-base
       
       .hero-image
+        padding: $spacing-md
         display: flex
         justify-content: center
         
         img
-          max-width: 400px
+          max-width: 300px
           height: auto
-          border-radius: 20px
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
           transition: transform 0.3s ease
+          border-radius: 20px
           @include mobile
-            max-width: calc(100% - 40px)
+            width: 80%
+            min-width: 200px
           
           &:hover
             transform: scale(1.05)
 
-      @keyframes h1-art-pop
-        0%
-          letter-spacing: 0
-          opacity: 0
-          transform: scale(0.8) rotate(-2deg)
-        60%
-          letter-spacing: 6px
-          opacity: 1
-          transform: scale(1.08) rotate(2deg)
-        100%
-          letter-spacing: 2px
-          opacity: 1
-          transform: scale(1) rotate(0)

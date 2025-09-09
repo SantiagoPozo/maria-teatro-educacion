@@ -8,78 +8,75 @@ orden: 1
 
 ### CURSO 2022-2023 en España
 
-CEIP Arias Montano, Sevilla  
+_CEIP Arias Montano_, Sevilla  
 Talleres de Educación Emocional a través del Teatro en inglés, de Infantil a 6º de Primaria.
 
-CEIP Pio XII, Sevilla  
+_CEIP Pio XII_, Sevilla  
 Talleres de Educación Emocional a través del Teatro, en varias etapas de Educación Primaria.
 
-IES Bellavista, Sevilla  
+_IES Bellavista_, Sevilla  
 Talleres de Educación Emocional a través del Teatro, en varias etapas de Educación Primaria.
 
-CEIP Carlos V, Sevilla  
+_CEIP Carlos V_, Sevilla  
 Talleres de Teatro, en 3º y 4º de Primaria.
 
-CEIP Adriano, Sevilla  
+_CEIP Adriano_, Sevilla  
 Talleres de teatro, en 6º de Primaria e Infantil 4 años.
 
-CEIP Pedro Garfias, Sevilla  
+_CEIP Pedro Garfias_, Sevilla  
 Talleres de Tertulia Dialógica, “El Principito” en 3º de Primaria y “El Mago de Oz” en 4º de Primaria.
 
 ### CURSO 2023-2024 en España
 
-CEIP Maestro Juan Marín de Vargas, Las Cabezas de San Juan.  
+_CEIP Maestro Juan Marín de Vargas_, Las Cabezas de San Juan.  
 Talleres de Técnicas de Estudio, en 5º y 6º de Primaria.
 
-IES Bellavista, Sevilla.  
+_IES Bellavista_, Sevilla.  
 Talleres de Educación Emocional a través del Teatro, en 2º de ESO.
 
-CEIP Fernán Caballero, Sevilla.  
+_CEIP Fernán Caballero_, Sevilla.  
 Taller “Fernán Caballero era Cecilia Bóhl de Faber”, de Infantil a 6º de Primaria.
 
-CEIP Joaquín Turina, Sevilla.  
+_CEIP Joaquín Turina_, Sevilla.  
 Recreos “Aula Específica Anfitriona”
 
-CEIP Miguel Hernández, Mairena del Aljarafe.  
+_CEIP Miguel Hernández_, Mairena del Aljarafe.  
 Títeres “Las Olimpiadas”, Aula Arcoiris
 
-CEIP Pedro Garfias, Sevilla.  
+_CEIP Pedro Garfias_, Sevilla.  
 Talleres de Tertulia Dialógica, “El Principito” en 3º de Primaria y “El Mago de Oz” en 4º de Primaria.
 
-CEIP Sánchez Mejías, Sevilla.  
+_CEIP Sánchez Mejías_, Sevilla.  
 Talleres de promoción del ámbito sociolingüístico a través del teatro, 4º y 5º de Primaria.
 
 ### CURSO 2024-2025 EN EEUU
 
-Johnson Park School, Princeton  
+_Johnson Park School_, Princeton
 Talleres de Teatro en todas las etapas de Educación Primaria.
 
-Riverside Elementary School, Princeton.  
+_Riverside Elementary School_, Princeton  
 Talleres de Teatro en todas las etapas de Educación Primaria.
 
-CEIP Pio XII, Sevilla  
+_CEIP Pio XII_, Sevilla  
 Primavera 2023  
 Taller de Escritura Creativa, en varias etapas.
-
-Trayectoria en Colegios.md
-Displaying Trayectoria en Colegios.md.
 
 ## Formación teatral
 
 **The Barrow Group, New York, EEUU**  
-_Formación actoral_  
+Formación actoral  
 Profesor: Ron Piretti, 2025
 
 **Stella Adler, New York, EEUU**  
-_Técnica Stella Adler de Actuación_  
+Técnica Stella Adler de Actuación  
 Profesor: Ryan Chittaphong, 2025
 
-**Teatro McCarter, Princeton, EEUU**  
-_Estudio de escenas_  
+**_Teatro McCarter_, Princeton, EEUU**  
+Estudio de escenas
 Profesora: Jacqueline Knox, 2025
 
-**La Barca otro Teatro, Sevilla, España**  
-_Cursos Iniciación e Intermedio de teatro_  
+**_La Barca otro Teatro_, Sevilla, España**  
+Cursos Iniciación e Intermedio de teatro
 Profesora: Patricia Davis, 2020–2022
 
 **Curso Avanzado de Teatro**  
@@ -93,24 +90,24 @@ Profesor: Santi Rivera, 2023–2024
 **Profesora de teatro**
 
 Diseño e implementación de talleres de teatro enfocados en la Educación Emocional y el aprendizaje Socioemocional en Centros Educativos del área de Princeton  
-_2025 – Teatro McCarter, Princeton, EEUU_
+2025 – _Teatro McCarter_, Princeton, EEUU
 
 **Profesora de teatro**
 
 Diseño e implementación de talleres de teatro enfocados en la Educación Emocional y el aprendizaje Socioemocional en Centros Educativos del área de Sevilla  
-_2021–2024 – La Barca otro teatro, Sevilla, España_
+2021–2024 – _La Barca otro teatro_, Sevilla, España
 
 **Profesora de ciencias, física, química** en Educación Secundaria  
-_2019–2020 – IES Olivares, Sevilla, España_
+2019–2020 – _IES Olivares_, Sevilla, España
 
 **Profesora de inglés** en Educación Primaria  
-_2018–2020 – Educoidiomas y Centro Norteamericano, Sevilla, España_
+2018–2020 – _Educoidiomas y Centro Norteamericano_, Sevilla, España
 
 **Profesora de física y química** en Educación Secundaria y Bachillerato  
-_2017–2019 – Centro V. Milagrosa, Sevilla, España_
+2017–2019 – _Centro V. Milagrosa_, Sevilla, España
 
 **Profesora de ciencias e inglés** en Educación Secundaria  
-_2012–2016 – Colegio de Fomento Entreolivos, Sevilla, España_
+2012–2016 – _Colegio de Fomento Entreolivos_, Sevilla, España
 
 **Profesora de español** en Educación Primaria  
-_2011 – Language Stars, Chicago, EEUU_
+2011 – _Language Stars_, Chicago, EEUU

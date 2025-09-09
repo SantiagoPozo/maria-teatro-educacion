@@ -70,21 +70,24 @@ header
 
       @include mobile
         flex-direction: column
-        gap: $spacing-md
+        gap: 0
         text-align: center
       
       .hero-text
         padding: $spacing-md
+        @include mobile
+          padding-bottom: 0
+          padding-top: 0
         h1
           height: 100%
           color: $text-color
-          font-size: $font-size-h3
+          font-size: $font-size-h2
           font-weight: 700
           line-height: 1.1
           letter-spacing: 2px
         
           @include mobile
-            font-size: $font-size-h3
+            font-size: $font-size-h2
 
         .hero-subtitle
           padding: $spacing-md
@@ -101,6 +104,8 @@ header
         padding: $spacing-md
         display: flex
         justify-content: center
+        @include mobile
+          padding: 0
         
         img
           max-width: 300px
@@ -110,6 +115,7 @@ header
           @include mobile
             width: 80%
             min-width: 200px
+            padding: 0
           
           &:hover
             transform: scale(1.05)

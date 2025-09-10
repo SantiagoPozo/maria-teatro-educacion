@@ -61,6 +61,11 @@ _CEIP Pio XII_, Sevilla
 Primavera 2023  
 Taller de Escritura Creativa, en varias etapas.
 
+<img src="/images/trayectoria-teatro.png" 
+alt="María con una camiseta amarilla sonriendo apoyando su mejilla derecha sobre su mano derecha." 
+class="secondary-image"
+ />
+
 ## Formación teatral
 
 **The Barrow Group, New York, EEUU**  

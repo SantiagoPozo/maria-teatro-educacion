@@ -46,3 +46,15 @@
 // Mixin para sombras
 @mixin box-shadow($shadow: 0 2px 4px rgba(0, 0, 0, 0.1))
   box-shadow: $shadow
+
+@mixin secondary-image($max-width: 400px, $margin: $spacing-lg auto)
+  width: 100%
+  max-width: $max-width
+  height: auto
+  border-radius: 12px
+  margin: $margin
+  display: block
+  @include box-shadow()
+  
+  @include mobile
+    max-width: 300px

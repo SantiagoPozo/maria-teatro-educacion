@@ -8,6 +8,14 @@ El teatro en la escuela es mucho más que una actividad artística: es una **her
 
 Los avances en **neuroeducación** muestran que las experiencias de aprendizaje más significativas son aquellas que involucran la emoción, el cuerpo y la creatividad. En este sentido, el teatro se convierte en un recurso privilegiado, ya que une pensamiento, emoción y acción dentro del aula.
 
+<img
+src="/images/maria-vestido-amarillo.png"
+alt="María con un vestido amarillo, los brazos hacia adelante y las manos abiertas y una gran sonrisa"
+class="secondary-image"
+loading="lazy"
+width="400"
+/>
+
 En **Educación Infantil y Primaria**, el teatro ofrece un espacio de juego y expresión donde no solo se aprenden contenidos, sino que también se desarrollan habilidades emocionales, sociales y cognitivas esenciales para el crecimiento.
 
 Los estudios sobre neuroeducación muestran que aprendemos mejor cuando la emoción, el cuerpo y la creatividad están presentes. Por eso, el teatro es un **recurso educativo** muy valioso: une pensamiento, emoción y acción dentro del aula.

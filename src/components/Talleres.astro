@@ -17,6 +17,14 @@ const talleresContenido = await Promise.all(
 );
 
 const baseUrl = import.meta.env.BASE_URL;
+
+// Imágenes del collage
+const imagenesTalleres = [
+    { src: 'principito-teatro.png', alt: 'Taller del Principito' },
+    { src: 'taller-escritura.jpg', alt: 'Taller de escritura creativa' },
+    { src: 'taller-teatro.png', alt: 'Taller de teatro' },
+    { src: 'talleres-colegios.png', alt: 'Talleres en colegios' }
+];
 ---
 
 <section class="talleres">
@@ -39,18 +47,118 @@ const baseUrl = import.meta.env.BASE_URL;
         </nav>
         
         <article class="talleres-list">
-            {talleresContenido.map((taller) => (
-                <section class="taller-item">
-                    <h2 id={taller.slug}>{taller.data.title}</h2>
+            {talleresContenido.map((taller, index) => (
+                <>
+                    <section class="taller-item">
+                        <h2 id={taller.slug}>{taller.data.title}</h2>
+                        
+                        {taller.data.edades && (
+                            <p class="taller-info">
+                                <strong>Edades:</strong> {taller.data.edades}
+                            </p>
+                        )}
+                        <taller.Content />
+                    </section>
                     
-                    {taller.data.edades && (
-                        <p class="taller-info">
-                            <strong>Edades:</strong> {taller.data.edades}
-                        </p>
+                    {/* Collage después del segundo taller */}
+                    {index === 1 && (
+                        <div class="image-collage">
+                            <div class="collage-grid">
+                                {imagenesTalleres.map((imagen, imgIndex) => (
+                                    <div class="collage-item" data-index={imgIndex}>
+                                        <img 
+                                            src={`${baseUrl}images/talleres/${imagen.src}`}
+                                            alt={imagen.alt}
+                                            class="collage-image"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            
+                            <!-- Modal para imagen ampliada -->
+                            <div class="image-modal" id="imageModal">
+                                <div class="modal-overlay"></div>
+                                <div class="modal-content">
+                                    <img class="modal-image" src="" alt="" />
+                                    <button class="modal-close">&times;</button>
+                                    <button class="modal-prev">&#8249;</button>
+                                    <button class="modal-next">&#8250;</button>
+                                </div>
+                            </div>
+                        </div>
                     )}
-                    <taller.Content />
-                </section>
+                </>
             ))}
         </article>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const collageImages = document.querySelectorAll('.collage-image');
+        const modal = document.getElementById('imageModal')!; // ← Non-null assertion
+        const modalImage = document.querySelector('.modal-image')! as HTMLImageElement;
+        const modalOverlay = document.querySelector('.modal-overlay')!;
+        const closeBtn = document.querySelector('.modal-close')!;
+        const prevBtn = document.querySelector('.modal-prev')!;
+        const nextBtn = document.querySelector('.modal-next')!;
+        
+        let currentImageIndex = 0;
+        const images = Array.from(collageImages) as HTMLImageElement[]; 
+
+        // Abrir modal al hacer clic en imagen del collage
+        collageImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentImageIndex = index;
+                showModal();
+            });
+        });
+        
+        // Cerrar modal
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+        
+        // Mostrar modal
+        function showModal() {
+            const currentImg = images[currentImageIndex];
+            modalImage.src = currentImg.src;
+            modalImage.alt = currentImg.alt;
+            modal.classList.add('active');
+        }
+        
+        // Navegación
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showModal();
+        }
+        
+        function showPrevImage() {
+            currentImageIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+            showModal();
+        }
+        
+        // Event listeners
+        closeBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+        nextBtn.addEventListener('click', showNextImage);
+        prevBtn.addEventListener('click', showPrevImage);
+        modalImage.addEventListener('click', showNextImage);
+        
+        // Cerrar con Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+        
+        // Navegación con teclado
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('active')) {
+                if (e.key === 'ArrowRight') showNextImage();
+                if (e.key === 'ArrowLeft') showPrevImage();
+            }
+        });
+    });
+</script>

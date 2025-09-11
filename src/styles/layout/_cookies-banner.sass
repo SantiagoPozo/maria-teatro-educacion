@@ -1,0 +1,71 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as *
+
+// Aviso de cookies
+.cookie-banner
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba($text-color-dark, 0.95)
+  backdrop-filter: blur(10px)
+  color: white
+  padding: $spacing-lg
+  transform: translateY(100%)
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)
+  z-index: 1000
+  border-top: 3px solid $primary-color
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15)
+  
+  &.visible
+    transform: translateY(0)
+  
+  &.hidden
+    transform: translateY(100%)
+
+.cookie-content
+  max-width: 1200px
+  margin: 0 auto
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: $spacing-lg
+  
+  @include mobile
+    flex-direction: column
+    text-align: center
+    gap: $spacing-md
+  
+  p
+    margin: 0
+    font-size: 0.95rem
+    line-height: 1.4
+    flex: 1
+    
+    @include mobile
+      font-size: 0.9rem
+
+.cookie-button
+  background: $primary-color
+  color: $text-color-dark
+  border: none
+  padding: $spacing-sm $spacing-lg
+  border-radius: 25px
+  font-weight: 600
+  font-size: 0.95rem
+  cursor: pointer
+  transition: all 0.3s ease
+  white-space: nowrap
+  min-width: 120px
+  
+  &:hover
+    background: lighten($primary-color, 10%)
+    transform: translateY(-2px)
+    box-shadow: 0 4px 12px rgba($primary-color, 0.3)
+  
+  &:active
+    transform: translateY(0)
+  
+  @include mobile
+    padding: $spacing-md $spacing-xl
+    font-size: 1rem

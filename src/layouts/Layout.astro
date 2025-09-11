@@ -24,6 +24,7 @@ const isActive = (path: string) => {
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -85,6 +86,7 @@ const isActive = (path: string) => {
       <slot />
     </main>
 
+    
     <!-- Botón volver arriba -->
     <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver arriba">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,8 +95,15 @@ const isActive = (path: string) => {
     </button>
     <div class="cta-section">
       <a href="mailto:mariaptavora@gmail.com" class="cta-button">
-          Contacta conmigo
+        Contacta conmigo
       </a>
+    </div>
+    <!-- Aviso de cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-content">
+        <p>Esta web utiliza cookies de Google Analytics para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
+        <button id="accept-cookies" class="cookie-button">Aceptar</button>
+      </div>
     </div>
     <footer>
       <p>&copy; {new Date().getFullYear()} María Pozo Távora - Teatro y Educación Emocional</p>
@@ -119,6 +128,36 @@ const isActive = (path: string) => {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
+        });
+      });
+
+      // Script para el aviso de cookies
+      document.addEventListener('DOMContentLoaded', function() {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptButton = document.getElementById('accept-cookies');
+        
+        // Verificar si las cookies ya fueron aceptadas
+        const cookiesAccepted = localStorage.getItem('cookies-accepted');
+        
+        if (!cookiesAccepted) {
+          // Mostrar el banner después de un pequeño delay
+          setTimeout(() => {
+            cookieBanner?.classList.add('visible');
+          }, 1000);
+        }
+        
+        // Manejar la aceptación de cookies
+        acceptButton?.addEventListener('click', () => {
+          // Guardar la aceptación en localStorage
+          localStorage.setItem('cookies-accepted', 'true');
+          
+          // Ocultar el banner con animación
+          cookieBanner?.classList.add('hidden');
+          
+          // Remover el elemento del DOM después de la animación
+          setTimeout(() => {
+            cookieBanner?.remove();
+          }, 500);
         });
       });
     </script>

@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
+@use 'sass:color'
 
 // Aviso de cookies
 .cookie-banner
@@ -59,7 +60,7 @@
   min-width: 120px
   
   &:hover
-    background: lighten($primary-color, 10%)
+    background: color.scale($primary-color, $lightness: -10%)
     transform: translateY(-2px)
     box-shadow: 0 4px 12px rgba($primary-color, 0.3)
   

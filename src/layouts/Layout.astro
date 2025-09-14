@@ -1,25 +1,56 @@
 ---
-const { title = "María Pozo · Teatro y Educación Emocional" } = Astro.props;
-// Importar estilos como módulo
 import '../styles/main.sass';
 
 const baseUrl = import.meta.env.BASE_URL;
 
 // Obtener la URL actual para determinar la página activa
 const currentPath = Astro.url.pathname;
-
 const isActive = (path: string) => {
-  // Para la página principal (más específica)
-  if (path === baseUrl) {
-    return currentPath === baseUrl || currentPath === '/' || currentPath === baseUrl.replace(/\/$/, '');
+  // Para la página principal
+  if (path === baseUrl || path === '/') {
+    return currentPath === baseUrl || currentPath === '/' || currentPath === '';
   }
   
   // Para otras páginas
-  const cleanPath = path.replace(baseUrl, '').replace(/\/$/, '');
-  const cleanCurrentPath = currentPath.replace(baseUrl, '').replace(/\/$/, '');
-  
-  return cleanCurrentPath.startsWith(cleanPath) && cleanPath.length > 0;
+  return currentPath.includes(path);
 };
+function getPageMeta(path : string) {
+  switch (path.replace(/\/$/, '')) {
+    case '':
+    case '/':
+      return {
+        title: "🪶 Talleres de Teatro y Educación Emocional en Colegios de Sevilla",
+        description: "🎭 Talleres de teatro para Infantil y Primaria que fomentan creatividad, empatía y gestión emocional - Transforma tu aula con pasión"
+      };
+    case '/about':
+      return {
+        title: "✨ 15 años de experiencia · Corazón, Emoción y Alma 🪽",
+        description: "💡 Soy María Pozo Távora, profesora de teatro con más de 15 años de experiencia 🎭 · Especialista en unir Teatro y Educación Emocional"
+      };
+    case '/talleres':
+      return {
+        title: "Teatro en el Aula 🎭 Cambio de perspectiva",
+        description: "🌱 Talleres de teatro 🎭 y actividades complementarias para colegios 🏫 · Creatividad, confianza y gestión emocional para cada edad 🌱."
+      };
+    case '/beneficios':
+      return {
+        title: "💛 Beneficios del Teatro en Infantil y Primaria",
+        description: "Comprueba cómo el teatro en el aula potencia la autoestima, la empatía, la cohesión grupal y mejora la comunicación. Resultados reales para Infantil y Primaria ✨"
+      };
+    case '/trayectoria':
+      return {
+        title: "Trayectoria profesional en Teatro",
+        description: "✍🏼 15 años enseñando, colaborando con colegios · Logros y proyectos destacados · Conoce mi recorrido en teatro y educación emocional🫂"
+      };
+    default:
+      return {
+        title: "María Pozo · Teatro y Educación Emocional",
+        description: "María Pozo Távora - Descubre mis talleres de teatro para grupos en edad escolar."
+      };
+  }
+}
+
+const { title: pageTitle, description: pageDescription } = getPageMeta(currentPath);
 ---
 <html lang="es">
   <head>
@@ -32,16 +63,36 @@ const isActive = (path: string) => {
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WF3KX2NJ');</script>
     <!-- End Google Tag Manager -->
-    <title>{title}</title>
+    <title>{pageTitle}</title>
     <link rel="icon" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="María Pozo Távora - Descubre mis talleres de teatro para grupos en edad escolar." />
+    <meta name="description" content={pageDescription} />
     <meta name="keywords" content="María Pozo, educación primaria, educación secundaria teatro, educación emocional, talleres de teatro, aprendizaje emocional, recursos educativos" />
     <meta name="author" content="Santiago Pozo" />
-  </head> 
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://mariapozotavora.com${currentPath}`} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content={`${baseUrl}images/og-image.jpg`} />
+    <meta property="og:site_name" content="María Pozo · Teatro y Educación Emocional" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={`https://mariapozotavora.com${currentPath}`} />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={pageDescription} />
+    <meta property="twitter:image" content={`${baseUrl}images/og-image.jpg`} />
+
+    <!-- Favicon adicional -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#F9CD1D" />
+    </head> 
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WF3KX2NJ"
@@ -52,7 +103,7 @@ const isActive = (path: string) => {
         <a href={baseUrl} class={isActive(baseUrl) ? 'active' : ''}>Inicio</a>
         <a href={`${baseUrl}about/`} class={isActive('about') ? 'active' : ''}>Sobre mí</a>
         <a href={`${baseUrl}talleres/`} class={isActive('talleres') ? 'active' : ''}>Talleres</a>
-        <a href={`${baseUrl}beneficios/`} class={isActive('claves') ? 'active' : ''}>Beneficios</a>
+        <a href={`${baseUrl}beneficios/`} class={isActive('beneficios') ? 'active' : ''}>Beneficios</a>
         <a href={`${baseUrl}trayectoria/`} class={isActive('trayectoria') ? 'active' : ''}>Trayectoria</a>
       </nav>
       <section class="landing-hero">
@@ -71,9 +122,6 @@ const isActive = (path: string) => {
 
     <!-- Social bar -->
     <aside class="social-bar">
-      <!-- <a href="https://www.youtube.com/@mariapozotavora4819" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube de María Pozo">
-        <img src={`${baseUrl}icons/social/youtube.svg`} alt="YouTube" />
-      </a> -->
       <a href="https://www.instagram.com/maria_teatro_emocionante/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de María Pozo">
         <img src={`${baseUrl}icons/social/instagram.svg`} alt="Instagram" />
       </a>

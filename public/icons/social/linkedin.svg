@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="LinkedIn icon">
+  <!-- Color principal -->
+  <defs>
+    <style>
+      .yl{fill:#F9CD1D}
+      .yls{stroke:#F9CD1D;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <!-- Marco cuadrado redondeado grueso (estética del ejemplo) -->
+  <rect x="16" y="16" width="224" height="224" rx="48" ry="48" class="yls" stroke-width="28"></rect>
+
+  <!-- Punto de la 'i' -->
+  <circle cx="98" cy="96" r="12" class="yl"></circle>
+
+  <!-- Tallo de la 'i' -->
+  <rect x="86" y="120" width="24" height="72" rx="12" class="yl"></rect>
+
+  <!-- 'n' de LinkedIn -->
+  <path d="M148 120 L148 192
+           M148 136
+           C148 120, 188 120, 188 136
+           L188 192" class="yls" stroke-width="20"></path>
+</svg>

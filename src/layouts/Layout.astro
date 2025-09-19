@@ -5,6 +5,7 @@ const baseUrl = import.meta.env.BASE_URL;
 
 // Obtener la URL actual para determinar la página activa
 const currentPath = Astro.url.pathname;
+
 const isActive = (path: string) => {
   // Para la página principal
   if (path === baseUrl || path === '/') {
@@ -14,8 +15,18 @@ const isActive = (path: string) => {
   // Para otras páginas
   return currentPath.includes(path);
 };
-function getPageMeta(path : string) {
-  switch (path.replace(/\/$/, '')) {
+
+// Función 1: Limpiar la dirección
+function cleanPath(path: string): string {
+  return path
+    .replace(/\/index\.html$/, '') 
+    .replace(/\/$/, '')             
+    .replace(/\.html$/, '') + '/';       
+}
+
+// Función 2: Obtener meta data basado en la página limpia
+function getMetaByPage(pageName: string): { title: string; description: string } {
+  switch (pageName) {
     case '':
     case '/':
       return {
@@ -50,7 +61,9 @@ function getPageMeta(path : string) {
   }
 }
 
-const { title: pageTitle, description: pageDescription } = getPageMeta(currentPath);
+// Usar las dos funciones juntas
+const cleanedPath = cleanPath(currentPath);
+const { title: pageTitle, description: pageDescription } = getMetaByPage(cleanedPath);
 ---
 <html lang="es">
   <head>
@@ -68,6 +81,7 @@ const { title: pageTitle, description: pageDescription } = getPageMeta(currentPa
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={pageDescription} />
     <meta name="keywords" content="María Pozo, educación primaria, educación secundaria teatro, educación emocional, talleres de teatro, aprendizaje emocional, recursos educativos" />
@@ -75,7 +89,7 @@ const { title: pageTitle, description: pageDescription } = getPageMeta(currentPa
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`https://mariapozotavora.com${currentPath}`} />
+    <meta property="og:url" content={`https://mariapozotavora.com${cleanedPath}`} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:image" content={`${baseUrl}images/og-image.jpg`} />
@@ -84,10 +98,20 @@ const { title: pageTitle, description: pageDescription } = getPageMeta(currentPa
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={`https://mariapozotavora.com${currentPath}`} />
+    <meta property="twitter:url" content={`https://mariapozotavora.com${cleanedPath}`} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={pageDescription} />
     <meta property="twitter:image" content={`${baseUrl}images/og-image.jpg`} />
+
+    <!-- LinkedIn -->
+    <meta property="linkedin:card" content="summary_large_image" />
+    <meta property="linkedin:url" content={`https://mariapozotavora.com${cleanedPath}`} />
+    <meta property="linkedin:title" content={pageTitle} />
+    <meta property="linkedin:description" content={pageDescription} />
+    <meta property="linkedin:image" content={`${baseUrl}images/og-image.jpg`} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={`https://mariapozotavora.com${cleanedPath}`} />
 
     <!-- Favicon adicional -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

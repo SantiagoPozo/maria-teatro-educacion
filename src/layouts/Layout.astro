@@ -168,11 +168,95 @@ const { title: pageTitle, description: pageDescription } = getMetaByPage(cleaned
         <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="currentColor"/>
       </svg>
     </button>
-    <div class="cta-section">
-      <a href="mailto:mariaptavora@gmail.com" class="cta-button">
-        Contacta conmigo
-      </a>
+
+
+    <!-- Formulario de contacto desplegable -->
+<div id="contact-overlay" class="contact-overlay">
+  <div class="contact-form-container">
+    <button id="close-form" class="close-form" aria-label="Cerrar formulario">×</button>
+    
+    <header class="form-header">
+      <h2>Contacta conmigo</h2>
+      <p>Cuéntame sobre tu proyecto y te responderé lo antes posible</p>
+    </header>
+    
+    <!-- Reemplaza la sección del formulario actual -->
+<form id="contact-form" action="https://formsubmit.co/mariaptavora@gmail.com" method="POST" novalidate>
+  <!-- Configuración de FormSubmit -->
+  <input type="hidden" name="_subject" value="Nuevo mensaje desde mariapozotavora.com">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://mariapozotavora.com/#form-sent">
+  
+  <div class="form-group">
+    <label for="nombre">Nombre completo *</label>
+    <input 
+      type="text" 
+      id="nombre" 
+      name="nombre" 
+      required 
+      placeholder="Tu nombre y apellidos"
+    >
+    <span class="error-message"></span>
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Correo electrónico *</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      required 
+      placeholder="tu@correo.com"
+    >
+    <span class="error-message"></span>
+  </div>
+  
+  <div class="form-group">
+    <label for="centro">Centro educativo *</label>
+    <input 
+      type="text" 
+      id="centro" 
+      name="centro" 
+      required 
+      placeholder="Nombre del colegio o centro"
+    >
+    <span class="error-message"></span>
+  </div>
+  
+  <div class="form-group">
+    <label for="mensaje">Mensaje *</label>
+    <textarea 
+      id="mensaje" 
+      name="mensaje" 
+      rows="4" 
+      required 
+      placeholder="Cuéntame quién eres y dame la información oportuna: edades, probables fechas, talleres..."
+    ></textarea>
+    <span class="error-message"></span>
+  </div>
+  
+  <!-- Botón de envío añadido -->
+  <button type="submit" class="submit-form-button">
+    Enviar mensaje
+  </button>
+</form>
+    
+    <!-- Mensaje de confirmación -->
+    <div id="success-message" class="success-message">
+      <h3>✨ Mensaje enviado</h3>
+      <p>Me pondré en contacto contigo lo antes posible.</p>
     </div>
+  </div>
+</div>
+
+<!-- Botón de contacto (modificado) -->
+<div class="cta-section">
+  <button id="contact-button" class="cta-button">
+    Contacta conmigo
+  </button>
+</div>
+
     <!-- Aviso de cookies -->
     <div id="cookie-banner" class="cookie-banner">
       <div class="cookie-content">
@@ -233,6 +317,60 @@ const { title: pageTitle, description: pageDescription } = getMetaByPage(cleaned
           setTimeout(() => {
             cookieBanner?.remove();
           }, 500);
+        });
+      });
+
+      // Script para el formulario de contacto
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactButton = document.getElementById('contact-button');
+        const contactOverlay = document.getElementById('contact-overlay');
+        const closeFormButton = document.getElementById('close-form');
+        const successMessage = document.getElementById('success-message');
+        const contactForm = document.getElementById('contact-form') as HTMLFormElement;
+
+        // Mostrar el formulario al hacer clic en el botón de contacto
+        contactButton?.addEventListener('click', () => {
+          contactOverlay?.classList.add('visible');
+        });
+
+        // Cerrar el formulario al hacer clic en el botón de cerrar
+        closeFormButton?.addEventListener('click', () => {
+          contactOverlay?.classList.remove('visible');
+        });
+
+        // Manejar el envío del formulario
+        contactForm?.addEventListener('submit', (event) => {
+          event.preventDefault(); // Prevenir el envío normal del formulario
+          
+          // Validar y enviar el formulario usando FormSubmit
+          const formData = new FormData(contactForm);
+          const jsonData = Object.fromEntries(formData.entries());
+          
+          // Aquí puedes agregar más validaciones si es necesario
+          
+          // Enviar los datos a FormSubmit
+          fetch(contactForm.action, {
+            method: 'POST',
+            body: JSON.stringify(jsonData),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              // Mostrar mensaje de éxito
+              contactForm?.reset();
+              contactOverlay?.classList.remove('visible');
+              successMessage?.classList.add('visible');
+            } else {
+              // Manejar errores de envío
+              alert('Error al enviar el mensaje. Por favor, intenta nuevamente más tarde.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('Error al enviar el mensaje. Por favor, intenta nuevamente más tarde.');
+          });
         });
       });
     </script>

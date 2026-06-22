@@ -14,6 +14,9 @@ const { Content } = aboutEntry ? await aboutEntry.render() : { Content: null };
             {aboutEntry ? (
                 <>
                     <h1>{aboutEntry.data.title}</h1>
+                    <figure class="about-photo">
+                        <img src="/images/photo.png" alt="Ilvora - retrato" loading="lazy" />
+                    </figure>
                     {Content && <Content />}
                 </>
             ) : (

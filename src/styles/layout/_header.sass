@@ -1,6 +1,5 @@
 @use '../abstracts/variables' as *
 @use '../abstracts/mixins' as *
-@use 'sass:color'
 
 // Header principal
 header
@@ -25,7 +24,6 @@ header
     @include mobile
       padding: $spacing-sm $spacing-sm
 
-
     a
       padding: $spacing-sm $spacing-md 0.15rem $spacing-md
       @include transition()
@@ -48,9 +46,9 @@ header
 
   // Hero section
   .landing-hero
-    background: linear-gradient(135deg, color.scale($primary-color, $lightness: 20%), $primary-color)
+    background-color: #eebd57
     width: 100%
-    padding: $spacing-md 0
+    padding: $spacing-lg 0
     margin: 0
     display: flex
     align-items: center
@@ -58,39 +56,58 @@ header
     .hero-content
       max-width: $max-width
       margin: 0 auto
-      padding: 0 
+      padding: 0 $spacing-md
       display: flex
-      gap: $spacing-md
       align-items: center
+      justify-content: center
 
       @include tablet
-        flex-direction: column
-        gap: $spacing-xl
         text-align: center
 
       @include mobile
-        flex-direction: column
-        gap: 0
         text-align: center
       
       .hero-text
-        padding: $spacing-md
+        padding: $spacing-sm
+        text-align: center
+
         @include mobile
-          padding-bottom: 0
-          padding-top: 0
+          padding: 0
+
         h1
-          height: 100%
-          color: $text-color
-          font-size: $font-size-h2
-          font-weight: 700
-          line-height: 1.1
-          letter-spacing: 2px
+          margin-bottom: $spacing-sm
+          line-height: 1
+          display: flex
+          justify-content: center
         
+          .hero-logo
+            width: min(520px, 90vw)
+            height: auto
+            display: block
+
+          .sr-only
+            position: absolute
+            width: 1px
+            height: 1px
+            padding: 0
+            margin: -1px
+            overflow: hidden
+            clip: rect(0, 0, 0, 0)
+            white-space: nowrap
+            border: 0
+
+        h2
+          color: $text-color
+          font-size: 1.45rem
+          font-weight: 600
+          line-height: 1.25
+          margin: 0
+
           @include mobile
-            font-size: $font-size-h2
+            font-size: 1.2rem
 
         .hero-subtitle
-          padding: $spacing-md
+          padding: $spacing-sm 0 0 0
           font-size: $font-size-large
           color: $text-color
           margin-bottom: 0
@@ -99,24 +116,4 @@ header
           
           @include mobile
             font-size: $font-size-base
-      
-      .hero-image
-        padding: $spacing-md
-        display: flex
-        justify-content: center
-        @include mobile
-          padding: 0
-        
-        img
-          max-width: 300px
-          height: auto
-          transition: transform 0.3s ease
-          border-radius: 20px
-          @include mobile
-            width: 80%
-            min-width: 200px
-            padding: 0
-          
-          &:hover
-            transform: scale(1.05)
 
